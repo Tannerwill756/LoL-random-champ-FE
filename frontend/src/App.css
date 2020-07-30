@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+/* --- solo section --- */
+
+.soloQ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.soloImg img {
+  max-height: 500px;
+  height: auto;
+  width: 70%;
+}
+
+.soloButtons {
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  padding: 0 5%;
+}
+
+.soloButtons button {
+  padding: 10px 25px;
+}
+
+/* --- team section --- */
+
+.teamMain h1 {
+  margin-top: 5%;
+}
+
+.teamMain button {
+  padding: 10px 45px;
+  cursor: pointer;
+}
+
+.teamChamps {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2% 0 2% 0;
+}
+
+.lane img {
+  height: auto;
+  width: 200px;
+}
