@@ -31,60 +31,72 @@ function App() {
     champion_name: "",
     champion_pic: "",
   });
-  //  function
+
   const getTop = () => {
-    axios.get("http://localhost:5000/api/champs/top").then((res) => {
-      setSolo({
-        champion_name: res.data.champion_name,
-        champion_pic: res.data.champion_pic,
+    axios
+      .get("https://lol-random-champ.herokuapp.com/api/champs/top")
+      .then((res) => {
+        setSolo({
+          champion_name: res.data.champion_name,
+          champion_pic: res.data.champion_pic,
+        });
       });
-    });
   };
 
   const getJng = () => {
-    axios.get("http://localhost:5000/api/champs/jungle").then((res) => {
-      setSolo({
-        champion_name: res.data.champion_name,
-        champion_pic: res.data.champion_pic,
+    axios
+      .get("https://lol-random-champ.herokuapp.com/api/champs/jungle")
+      .then((res) => {
+        setSolo({
+          champion_name: res.data.champion_name,
+          champion_pic: res.data.champion_pic,
+        });
       });
-    });
   };
 
   const getMid = () => {
-    axios.get("http://localhost:5000/api/champs/mid").then((res) => {
-      setSolo({
-        champion_name: res.data.champion_name,
-        champion_pic: res.data.champion_pic,
+    axios
+      .get("https://lol-random-champ.herokuapp.com/api/champs/mid")
+      .then((res) => {
+        setSolo({
+          champion_name: res.data.champion_name,
+          champion_pic: res.data.champion_pic,
+        });
       });
-    });
   };
 
   const getAdc = () => {
-    axios.get("http://localhost:5000/api/champs/adc").then((res) => {
-      setSolo({
-        champion_name: res.data.champion_name,
-        champion_pic: res.data.champion_pic,
+    axios
+      .get("https://lol-random-champ.herokuapp.com/api/champs/adc")
+      .then((res) => {
+        setSolo({
+          champion_name: res.data.champion_name,
+          champion_pic: res.data.champion_pic,
+        });
       });
-    });
   };
 
   const getSup = () => {
-    axios.get("http://localhost:5000/api/champs/sup").then((res) => {
-      setSolo({
-        champion_name: res.data.champion_name,
-        champion_pic: res.data.champion_pic,
+    axios
+      .get("https://lol-random-champ.herokuapp.com/api/champs/sup")
+      .then((res) => {
+        setSolo({
+          champion_name: res.data.champion_name,
+          champion_pic: res.data.champion_pic,
+        });
       });
-    });
   };
 
   const getTeam = () => {
-    axios.get("http://localhost:5000/api/champs/team").then((res) => {
-      setTop(res.data[0]);
-      setJg(res.data[1]);
-      setMid(res.data[2]);
-      setAdc(res.data[3]);
-      setSup(res.data[4]);
-    });
+    axios
+      .get("https://lol-random-champ.herokuapp.com/api/champs/team")
+      .then((res) => {
+        setTop(res.data[0]);
+        setJg(res.data[1]);
+        setMid(res.data[2]);
+        setAdc(res.data[3]);
+        setSup(res.data[4]);
+      });
   };
   return (
     <div className="App">
