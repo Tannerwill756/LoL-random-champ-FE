@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 import defaultImg from "./images/default_img.png";
+import bgImg from "./images/Bg_img.jpg";
 
 import axios from "axios";
 
@@ -99,93 +100,104 @@ function App() {
       });
   };
   return (
-    <div className="App">
-      <div className="soloQ">
-        <div className="soloButtons">
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => getTop()}
-          >
-            Top
-          </button>
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => getJng()}
-          >
-            Jungle
-          </button>
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => getMid()}
-          >
-            Mid
-          </button>
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => getAdc()}
-          >
-            ADC
-          </button>
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => getSup()}
-          >
-            Support
-          </button>
+    <div className="superParent">
+      <div className="App">
+        <div className="mainHeader">
+          <h1>
+            League of Legends <br /> Random Champion Generator
+          </h1>
         </div>
-        <div className="soloImg">
-          <h2>
-            {solo.champion_name === ""
-              ? "Choose your lane"
-              : solo.champion_name}
-          </h2>
-          <img
-            alt=""
-            src={solo.champion_pic === "" ? defaultImg : solo.champion_pic}
-          />
-        </div>
-      </div>
-
-      <div className="teamMain">
-        <h1>Generate Random Team</h1>
-        {top.champion_name === "" ? null : (
-          <div className="teamChamps">
-            <div className="lane">
-              <h4> Top lane: {top.champion_name} </h4>
-              <img alt="" src={top.champion_pic} />
-            </div>
-            <div className="lane">
-              <h4> Jungle: {jg.champion_name} </h4>
-              <img alt="" src={jg.champion_pic} />
-            </div>
-            <div className="lane">
-              <h4> Mid lane: {mid.champion_name} </h4>
-              <img alt="" src={mid.champion_pic} />
-            </div>
-            <div className="lane">
-              <h4> ADC: {adc.champion_name} </h4>
-              <img alt="" src={adc.champion_pic} />
-            </div>
-
-            <div className="lane">
-              <h4> Support: {sup.champion_name} </h4>
-              <img alt="" src={sup.champion_pic} />
-            </div>
+        <div className="soloQ">
+          <div className="soloButtons">
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={() => getTop()}
+            >
+              Top
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={() => getJng()}
+            >
+              Jungle
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={() => getMid()}
+            >
+              Mid
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={() => getAdc()}
+            >
+              Adc
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={() => getSup()}
+            >
+              Support
+            </button>
           </div>
-        )}
+          <div className="soloImg">
+            <h2>
+              {solo.champion_name === ""
+                ? "Choose your lane"
+                : solo.champion_name}
+            </h2>
+            <img
+              alt=""
+              src={solo.champion_pic === "" ? bgImg : solo.champion_pic}
+            />
+          </div>
+        </div>
 
-        <button
-          type="button"
-          className="btn btn-dark"
-          onClick={() => getTeam()}
-        >
-          Create Team
-        </button>
+        <div className="teamMain">
+          {top.champion_name === "" ? null : (
+            <div className="teamChamps">
+              <div className="lane">
+                <h4> Top</h4>
+                <img alt="" src={top.champion_pic} />
+                <h5> {top.champion_name} </h5>
+              </div>
+              <div className="lane">
+                <h4> Jungle</h4>
+                <img alt="" src={jg.champion_pic} />
+                <h5> {jg.champion_name} </h5>
+              </div>
+              <div className="lane">
+                <h4> Mid</h4>
+                <img alt="" src={mid.champion_pic} />
+                <h5> {mid.champion_name} </h5>
+              </div>
+              <div className="lane">
+                <h4> Adc</h4>
+                <img alt="" src={adc.champion_pic} />
+                <h5> {adc.champion_name} </h5>
+              </div>
+
+              <div className="lane">
+                <h4> Support</h4>
+                <img alt="" src={sup.champion_pic} />
+                <h5> {sup.champion_name} </h5>
+              </div>
+            </div>
+          )}
+
+          <button
+            type="button"
+            className="btn btn-outline-primary"
+            onClick={() => getTeam()}
+          >
+            Randomly Generate Team
+          </button>
+        </div>
       </div>
     </div>
   );

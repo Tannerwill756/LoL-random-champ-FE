@@ -1,8 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Antic Slab", serif;
+}
+
+.superParent {
+  background-color: #dcc48e;
+}
+
 .App {
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2%;
+  padding: 1% 0;
+  background-color: #eaefd3;
+}
+
+.mainHeader {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2%;
+}
+
+.mainHeader h1 {
+  font-weight: 550;
 }
 
 /* --- solo section --- */
@@ -11,12 +35,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 3%;
+  padding-bottom: 5%;
 }
 
 .soloImg img {
   max-height: 500px;
   height: auto;
   width: 70%;
+  border-radius: 10px;
 }
 
 .soloButtons {
@@ -34,8 +63,8 @@
 
 /* --- team section --- */
 
-.teamMain h1 {
-  margin-top: 5%;
+.teamMain {
+  margin-top: 3%;
 }
 
 .teamMain button {
@@ -52,4 +81,8 @@
 .lane img {
   height: auto;
   width: 200px;
+}
+
+.lane h5 {
+  margin-top: 5%;
 }
