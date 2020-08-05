@@ -159,6 +159,14 @@ function App() {
         </div>
 
         <div className="teamMain">
+          <button
+            type="button"
+            className="btn btn-outline-primary"
+            onClick={() => getTeam()}
+          >
+            Randomly Generate Team
+          </button>
+
           {top.champion_name === "" ? null : (
             <div className="teamChamps">
               <div className="lane">
@@ -189,14 +197,6 @@ function App() {
               </div>
             </div>
           )}
-
-          <button
-            type="button"
-            className="btn btn-outline-primary"
-            onClick={() => getTeam()}
-          >
-            Randomly Generate Team
-          </button>
         </div>
       </div>
     </div>
