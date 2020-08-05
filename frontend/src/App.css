@@ -33,7 +33,7 @@ h6 {
 
 .soloQ {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -41,14 +41,20 @@ h6 {
   padding-bottom: 5%;
 }
 
+.soloImg {
+  /* border: 1px solid green; */
+  width: 60%;
+}
+
 .soloImg img {
   max-height: 500px;
   height: auto;
-  width: 70%;
+  width: 90%;
   border-radius: 10px;
 }
 
 .soloButtons {
+  /* border: 1px solid red; */
   max-height: 500px;
   display: flex;
   flex-direction: column;

@@ -111,28 +111,28 @@ function App() {
           <div className="soloButtons">
             <button
               type="button"
-              className="btn btn-outline-primary"
+              className="btn btn-outline-secondary"
               onClick={() => getTop()}
             >
               Top
             </button>
             <button
               type="button"
-              className="btn btn-outline-primary"
+              className="btn btn-outline-dark"
               onClick={() => getJng()}
             >
               Jungle
             </button>
             <button
               type="button"
-              className="btn btn-outline-primary"
+              className="btn btn-outline-info"
               onClick={() => getMid()}
             >
               Mid
             </button>
             <button
               type="button"
-              className="btn btn-outline-primary"
+              className="btn btn-outline-success"
               onClick={() => getAdc()}
             >
               Adc
@@ -148,7 +148,7 @@ function App() {
           <div className="soloImg">
             <h2>
               {solo.champion_name === ""
-                ? "Choose your lane"
+                ? "Choose Your Lane"
                 : solo.champion_name}
             </h2>
             <img
