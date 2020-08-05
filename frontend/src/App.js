@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import defaultImg from "./images/default_img.png";
 import bgImg from "./images/Bg_img.jpg";
+import topIcon from "./images/topImg.png";
+import jgIcon from "./images/jungle_icon.png";
+import midIcon from "./images/mid_icon.png";
+import botIcon from "./images/bot_icon.png";
+import supIcon from "./images/support_icon.png";
 
 import axios from "axios";
 
@@ -114,6 +118,7 @@ function App() {
               className="btn btn-outline-secondary"
               onClick={() => getTop()}
             >
+              <img src={topIcon} />
               Top
             </button>
             <button
@@ -121,6 +126,7 @@ function App() {
               className="btn btn-outline-dark"
               onClick={() => getJng()}
             >
+              <img src={jgIcon} />
               Jungle
             </button>
             <button
@@ -128,6 +134,7 @@ function App() {
               className="btn btn-outline-info"
               onClick={() => getMid()}
             >
+              <img src={midIcon} />
               Mid
             </button>
             <button
@@ -135,6 +142,7 @@ function App() {
               className="btn btn-outline-success"
               onClick={() => getAdc()}
             >
+              <img src={botIcon} />
               Adc
             </button>
             <button
@@ -142,6 +150,7 @@ function App() {
               className="btn btn-outline-primary"
               onClick={() => getSup()}
             >
+              <img src={supIcon} />
               Support
             </button>
           </div>
